@@ -237,11 +237,12 @@ exports[`Game component should render correctly 1`] = `
           />
         </li>
         <li
-          className="board__square"
+          className="board__square clickable"
           id="34"
+          onClick={[Function]}
         >
           <div
-            className="no-chip chip"
+            className="available-chip chip"
           />
         </li>
         <li
@@ -302,11 +303,12 @@ exports[`Game component should render correctly 1`] = `
           />
         </li>
         <li
-          className="board__square"
+          className="board__square clickable"
           id="43"
+          onClick={[Function]}
         >
           <div
-            className="no-chip chip"
+            className="available-chip chip"
           />
         </li>
         <li
@@ -399,11 +401,12 @@ exports[`Game component should render correctly 1`] = `
           />
         </li>
         <li
-          className="board__square"
+          className="board__square clickable"
           id="56"
+          onClick={[Function]}
         >
           <div
-            className="no-chip chip"
+            className="available-chip chip"
           />
         </li>
         <li
@@ -464,11 +467,12 @@ exports[`Game component should render correctly 1`] = `
           />
         </li>
         <li
-          className="board__square"
+          className="board__square clickable"
           id="65"
+          onClick={[Function]}
         >
           <div
-            className="no-chip chip"
+            className="available-chip chip"
           />
         </li>
         <li
