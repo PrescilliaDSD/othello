@@ -1,0 +1,11 @@
+@import 'abstracts/variables';
+
+@import 'base/base',
+        'base/typography',
+        'base/normalize';
+
+@import 'components/board',
+        'components/chip',
+        'components/game-infos';
+
+@import 'pages/game';

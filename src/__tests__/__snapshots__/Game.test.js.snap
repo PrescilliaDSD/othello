@@ -1,0 +1,661 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Game component should render correctly 1`] = `
+<main>
+  <h1>
+    Othello
+  </h1>
+  <div
+    className="play-area"
+  >
+    <article
+      className="board"
+    >
+      <ul
+        className="board__row"
+      >
+        <li
+          className="row-number"
+        />
+        <li
+          className="row-number"
+        >
+          1
+        </li>
+        <li
+          className="row-number"
+        >
+          2
+        </li>
+        <li
+          className="row-number"
+        >
+          3
+        </li>
+        <li
+          className="row-number"
+        >
+          4
+        </li>
+        <li
+          className="row-number"
+        >
+          5
+        </li>
+        <li
+          className="row-number"
+        >
+          6
+        </li>
+        <li
+          className="row-number"
+        >
+          7
+        </li>
+        <li
+          className="row-number"
+        >
+          8
+        </li>
+      </ul>
+      <ul
+        className="board__row"
+      >
+        <li
+          className="column-number"
+        >
+          1
+        </li>
+        <li
+          className="board__square"
+          id="11"
+        >
+          <div
+            className="0-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="12"
+        >
+          <div
+            className="1-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="13"
+        >
+          <div
+            className="2-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="14"
+        >
+          <div
+            className="3-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="15"
+        >
+          <div
+            className="4-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="16"
+        >
+          <div
+            className="5-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="17"
+        >
+          <div
+            className="6-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="18"
+        >
+          <div
+            className="7-chip chip"
+          />
+        </li>
+      </ul>
+      <ul
+        className="board__row"
+      >
+        <li
+          className="column-number"
+        >
+          2
+        </li>
+        <li
+          className="board__square"
+          id="21"
+        >
+          <div
+            className="0-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="22"
+        >
+          <div
+            className="1-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="23"
+        >
+          <div
+            className="2-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="24"
+        >
+          <div
+            className="3-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="25"
+        >
+          <div
+            className="4-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="26"
+        >
+          <div
+            className="5-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="27"
+        >
+          <div
+            className="6-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="28"
+        >
+          <div
+            className="7-chip chip"
+          />
+        </li>
+      </ul>
+      <ul
+        className="board__row"
+      >
+        <li
+          className="column-number"
+        >
+          3
+        </li>
+        <li
+          className="board__square"
+          id="31"
+        >
+          <div
+            className="0-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="32"
+        >
+          <div
+            className="1-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="33"
+        >
+          <div
+            className="2-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="34"
+        >
+          <div
+            className="3-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="35"
+        >
+          <div
+            className="4-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="36"
+        >
+          <div
+            className="5-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="37"
+        >
+          <div
+            className="6-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="38"
+        >
+          <div
+            className="7-chip chip"
+          />
+        </li>
+      </ul>
+      <ul
+        className="board__row"
+      >
+        <li
+          className="column-number"
+        >
+          4
+        </li>
+        <li
+          className="board__square"
+          id="41"
+        >
+          <div
+            className="0-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="42"
+        >
+          <div
+            className="1-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="43"
+        >
+          <div
+            className="2-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="44"
+        >
+          <div
+            className="white-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="45"
+        >
+          <div
+            className="black-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="46"
+        >
+          <div
+            className="5-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="47"
+        >
+          <div
+            className="6-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="48"
+        >
+          <div
+            className="7-chip chip"
+          />
+        </li>
+      </ul>
+      <ul
+        className="board__row"
+      >
+        <li
+          className="column-number"
+        >
+          5
+        </li>
+        <li
+          className="board__square"
+          id="51"
+        >
+          <div
+            className="0-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="52"
+        >
+          <div
+            className="1-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="53"
+        >
+          <div
+            className="2-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="54"
+        >
+          <div
+            className="black-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="55"
+        >
+          <div
+            className="white-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="56"
+        >
+          <div
+            className="5-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="57"
+        >
+          <div
+            className="6-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="58"
+        >
+          <div
+            className="7-chip chip"
+          />
+        </li>
+      </ul>
+      <ul
+        className="board__row"
+      >
+        <li
+          className="column-number"
+        >
+          6
+        </li>
+        <li
+          className="board__square"
+          id="61"
+        >
+          <div
+            className="0-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="62"
+        >
+          <div
+            className="1-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="63"
+        >
+          <div
+            className="2-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="64"
+        >
+          <div
+            className="3-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="65"
+        >
+          <div
+            className="4-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="66"
+        >
+          <div
+            className="5-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="67"
+        >
+          <div
+            className="6-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="68"
+        >
+          <div
+            className="7-chip chip"
+          />
+        </li>
+      </ul>
+      <ul
+        className="board__row"
+      >
+        <li
+          className="column-number"
+        >
+          7
+        </li>
+        <li
+          className="board__square"
+          id="71"
+        >
+          <div
+            className="0-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="72"
+        >
+          <div
+            className="1-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="73"
+        >
+          <div
+            className="2-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="74"
+        >
+          <div
+            className="3-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="75"
+        >
+          <div
+            className="4-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="76"
+        >
+          <div
+            className="5-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="77"
+        >
+          <div
+            className="6-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="78"
+        >
+          <div
+            className="7-chip chip"
+          />
+        </li>
+      </ul>
+      <ul
+        className="board__row"
+      >
+        <li
+          className="column-number"
+        >
+          8
+        </li>
+        <li
+          className="board__square"
+          id="81"
+        >
+          <div
+            className="0-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="82"
+        >
+          <div
+            className="1-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="83"
+        >
+          <div
+            className="2-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="84"
+        >
+          <div
+            className="3-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="85"
+        >
+          <div
+            className="4-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="86"
+        >
+          <div
+            className="5-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="87"
+        >
+          <div
+            className="6-chip chip"
+          />
+        </li>
+        <li
+          className="board__square"
+          id="88"
+        >
+          <div
+            className="7-chip chip"
+          />
+        </li>
+      </ul>
+    </article>
+    <aside
+      className="aside"
+    >
+      <div
+        className="aside__chip black-chip chip"
+      />
+      <button
+        className="pass-button"
+        type="button"
+      >
+        passer
+      </button>
+    </aside>
+  </div>
+</main>
+`;
