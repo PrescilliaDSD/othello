@@ -11,7 +11,7 @@ const Game = () => {
     <main>
       <h1>Othello</h1>
       <div className="play-area">
-        <Board currentPlayer={currentPlayer} />
+        <Board currentPlayer={currentPlayer} setCurrentPlayer={setCurrentPlayer} />
         <GameInfos round={round} currentPlayer={currentPlayer} />
       </div>
     </main>
