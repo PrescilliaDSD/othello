@@ -53,7 +53,15 @@ const Board = ({ currentPlayer, setCurrentPlayer, opponent, setOpponent }) => {
           } else if (currentPlayer === removeAllAvailable[i + 1][j] && removeAllAvailable[i + 1][j] === 'no') {
             return column
           } else if (currentPlayer === removeAllAvailable[i + 2][j] && removeAllAvailable[i + 1][j] === opponent) {
-            return 'available'
+            let k = 1
+            while (removeAllAvailable[i + k][j] === opponent) {
+              k += 1
+            }
+            if (removeAllAvailable[i + k][j] === currentPlayer) {
+              return 'available'
+            } else {
+              return column
+            }
           }
         })
       } else {
