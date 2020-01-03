@@ -6,7 +6,7 @@ import Game from './Game/index'
 const App = () => {
   return (
     <Router>
-      <Route exact path="/">
+      <Route exact path="/game">
         <Game />
       </Route>
     </Router>

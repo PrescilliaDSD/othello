@@ -4,16 +4,13 @@ import Board from './Board'
 import GameInfos from './GameInfos'
 
 const Game = () => {
-  const [round, setRound] = useState(1)
   const [currentPlayer, setCurrentPlayer] = useState('black')
+  const [opponent, setOpponent] = useState('white')
 
   return (
-    <main>
-      <h1>Othello</h1>
-      <div className="play-area">
-        <Board currentPlayer={currentPlayer} setCurrentPlayer={setCurrentPlayer} />
-        <GameInfos round={round} currentPlayer={currentPlayer} />
-      </div>
+    <main className="play-area">
+      <Board currentPlayer={currentPlayer} setCurrentPlayer={setCurrentPlayer} opponent={opponent} setOpponent={setOpponent} />
+      <GameInfos currentPlayer={currentPlayer} />
     </main>
   )
 }
