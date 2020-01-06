@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound component should render correctly 1`] = `
+<main
+  className="home"
+>
+  <p
+    className="what-to-do"
+  >
+    Oups ! Je crois que tu es perdu.
+  </p>
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    Retourner sur la page d'accueil
+  </a>
+</main>
+`;

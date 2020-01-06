@@ -36,3 +36,10 @@ Il faut le copier et le renommer `.env` en modifiant si nécessaire les variable
 Il vous faut lancer votre base de données puis exécuter la commande :
 
 `npm start`
+
+## Les commandes utiles
+
+- `npm start` : permet de lancer le client et le serveur
+- `npm run test` : permet de lancer les tests côté client
+- `npm run lint` : permet de lancer la vérification du linter de le dossier src et dans le dossier server.
+- `npm run coverage` : permet de lancer le calcul de couverture de tests

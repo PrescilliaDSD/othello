@@ -7,7 +7,6 @@ import SignUpSignIn from './SignUpSignIn'
 import NotFound from './NotFound'
 
 const App = () => {
-
   const [loggedIn, setLoggedIn] = useState(false)
   const [gameData, setGameData] = useState({})
   const [message, setMessage] = useState({

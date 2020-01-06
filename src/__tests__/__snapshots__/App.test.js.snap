@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Root component should render correctly 1`] = `
+<main>
+  <h1
+    className="welcome-title"
+  >
+    Bienvenue sur ce jeu Othello !
+  </h1>
+  <p
+    className="message message-"
+  >
+    
+  </p>
+  <div
+    className="sign-forms"
+  >
+    <section>
+      <h2>
+        S'inscrire
+      </h2>
+      <form>
+        <label
+          htmlFor="signUpPseudo"
+        >
+          Pseudo : 
+          <input
+            id="signUpPseudo"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </label>
+        <label
+          htmlFor="signUpPassword"
+        >
+          Mot de passe : 
+          <input
+            id="signUpPassword"
+            onChange={[Function]}
+            type="password"
+            value=""
+          />
+        </label>
+        <label
+          htmlFor="confirmPassword"
+        >
+          Confirmer le mot de passe : 
+          <input
+            id="confirmPassword"
+            onChange={[Function]}
+            type="password"
+            value=""
+          />
+        </label>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          S'inscrire
+        </button>
+      </form>
+    </section>
+    <section>
+      <h2>
+        Se connecter
+      </h2>
+      <form>
+        <label
+          htmlFor="signInPseudo"
+        >
+          Pseudo : 
+          <input
+            id="signInPseudo"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+        </label>
+        <label
+          htmlFor="signInPassword"
+        >
+          Mot de passe : 
+          <input
+            id="signInPassword"
+            onChange={[Function]}
+            type="password"
+            value=""
+          />
+        </label>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          Se connecter
+        </button>
+      </form>
+    </section>
+  </div>
+</main>
+`;
