@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 const Home = ({ setLoggedIn, gameData, setGameData, message, setMessage }) => {
-
   const [gamesList, setGamesList] = useState([])
 
   const logout = () => {
@@ -31,12 +30,11 @@ const Home = ({ setLoggedIn, gameData, setGameData, message, setMessage }) => {
       .then((res) => {
         setGameData(res.game)
         setMessage({
-          text: 'Votre partie a bien été créée. Pour y accéder, cliquez sur le bouton "continuer une partie en cours".',
+          text: 'Votre partie a bien été créée. Pour y accéder, cliquez sur le bouton "Accéder à la partie créée".',
           status: 'success'
         })
         setGamesList([...gamesList, res.game])
       })
-
   }
 
   useEffect(() => {
@@ -55,21 +53,10 @@ const Home = ({ setLoggedIn, gameData, setGameData, message, setMessage }) => {
       <h1>Jeu Othello</h1>
       <p className={`message message-${message.status}`}>{message.text}</p>
       <p className="what-to-do">Que voulez-vous faire ?</p>
-      <ul>
-        {
-          gamesList.length > 0 && gamesList.map((game) => {
-            if (game.status === 'wait for player 2') {
-              return (
-                <li className="games__list__item"><Link to={`/game/${game._id}?pseudo=${sessionStorage.getItem('pseudo')}`}>{game.player1.pseudo} attend un adversaire !</Link></li>
-              )
-            }
-          })
-        }
-      </ul>
       <ul className="home__actions">
         {
           gameData._id &&
-          <li><Link to={`/game/${gameData._id}?pseudo=${sessionStorage.getItem('pseudo')}`}>Continuer une partie en cours</Link></li>
+          <li><Link className="button" to={`/game/${gameData._id}?pseudo=${sessionStorage.getItem('pseudo')}`}>Accéder à la partie créée</Link></li>
         }
         {
           !gameData._id &&
@@ -77,13 +64,30 @@ const Home = ({ setLoggedIn, gameData, setGameData, message, setMessage }) => {
         }
         <li><button onClick={logout}>Me déconnecter</button></li>
       </ul>
+      <ul className="games__list">
+        <p>Parties en cours : </p>
+        {
+          gamesList.length > 0 && gamesList.map((game) => {
+            if (game.status === 'wait for player 2') {
+              return (
+                <li key={game._id} className="games__list__item"><Link to={`/game/${game._id}?pseudo=${sessionStorage.getItem('pseudo')}&pseudo2=${sessionStorage.getItem('pseudo')}${2}`}>Partie {game._id}</Link></li>
+              )
+            }
+            return <li key={game._id} className="games__list__item"></li>
+          })
+        }
+      </ul>
     </main>
 
   )
 }
 
 Home.propTypes = {
-  setLoggedIn: PropTypes.func.isRequired
+  setLoggedIn: PropTypes.func.isRequired,
+  gameData: PropTypes.object.isRequired,
+  setGameData: PropTypes.func.isRequired,
+  message: PropTypes.object.isRequired,
+  setMessage: PropTypes.func.isRequired
 }
 
 export default Home

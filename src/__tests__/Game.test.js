@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import Game from '../Game/index'
+import Game from '../components/Game/index'
 
 describe('Game component', () => {
   it('should render correctly', () => {

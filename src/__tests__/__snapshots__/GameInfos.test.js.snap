@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameInfos component should render correctly 1`] = `
+<aside
+  className="aside"
+>
+  <div
+    className="msg"
+  >
+    
+  </div>
+  <p>
+    Score : 
+  </p>
+  <ul
+    className="score__list"
+  >
+    <li
+      className="score__list__item"
+    >
+      
+       
+      <div
+        className="aside__chip black-chip chip"
+      >
+        <p>
+          2
+        </p>
+      </div>
+    </li>
+    <li
+      className="score__list__item"
+    >
+      
+       
+      <div
+        className="aside__chip white-chip chip"
+      >
+        <p>
+          2
+        </p>
+      </div>
+    </li>
+  </ul>
+  <div
+    className="turn"
+  >
+    C'est au tour de : 
+    <div
+      className="aside__chip black-chip chip"
+    />
+  </div>
+  <button
+    className="pass-button"
+    onClick={[Function]}
+    type="button"
+  >
+    passer
+  </button>
+</aside>
+`;

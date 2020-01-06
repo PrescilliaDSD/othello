@@ -1,12 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useParams } from 'react-router-dom'
-import io from 'socket.io-client'
 
 import Board from './Board'
 import GameInfos from './GameInfos'
-
-const socket = io('http://localhost:8888')
 
 const Game = () => {
   const [currentPlayer, setCurrentPlayer] = useState('')
@@ -20,20 +18,16 @@ const Game = () => {
   const [player2, setPlayer2] = useState('')
   const [status, setStatus] = useState('')
 
+  const params = useParams()
+
   const endGame = () => {
-    whiteScore > blackScore ? setEndMsg('Le joueur blanc a gagné !') : setEndMsg('Le joueur noir a gagné !')
+    whiteScore > blackScore ? setEndMsg(`${player2} a gagné !`) : setEndMsg(`${player1} a gagné !`)
     setTimeout(() => {
       window.location.replace('http://localhost:9000/')
     }, 5000)
   }
 
-  const params = useParams()
-
   useEffect(() => {
-    socket.on('connection', () => {
-      console.log('hello new user')
-    })
-
     fetch('http://localhost:8888/game', {
       method: 'GET',
       headers: {
@@ -54,6 +48,7 @@ const Game = () => {
             setPlayer2(game.player2.pseudo)
             setStatus(game.status)
           }
+          return game
         })
       })
   }, [])

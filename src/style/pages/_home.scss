@@ -12,6 +12,16 @@
   }
 }
 
-.games__list__item {
-  list-style-type: none;
+.games__list {
+  &__item {
+    margin: .5rem;
+    list-style-type: none;
+    a {
+      text-decoration: none;
+      color: $headings;
+      &:hover {
+        color: black;
+      }
+    }
+  }
 }

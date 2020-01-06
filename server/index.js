@@ -1,9 +1,7 @@
 const express = require('express')
-const http = require('http')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const mongoose = require('mongoose')
-const socketio = require('socket.io')
 require('dotenv').config()
 
 const UserModel = require('./models/User')
@@ -11,13 +9,11 @@ const GameModel = require('./models/Game')
 
 const PORT = 8888
 const app = express()
-app.use(cors({ 'Access-Control-Allow-Origin': 'http://127.0.0.1:9000' }))
+app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
   extended: false
 }))
-const server = http.createServer(app)
-const io = socketio(server)
 
 mongoose.connect(`mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/othello`, {
   useNewUrlParser: true,
@@ -26,10 +22,6 @@ mongoose.connect(`mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/othell
   console.log('connected to MongoDB')
 }).catch((error) => {
   console.log('error connecting to MongoDB:', error.message)
-})
-
-io.on('connection', (socket) => {
-  socket.emit('connection', console.log('hello new user'))
 })
 
 app.post('/signup', (req, res) => {
@@ -80,7 +72,7 @@ app.post('/createGame', (req, res) => {
     score: 2
   }
   const player2 = {
-    pseudo: '',
+    pseudo: `${req.body.pseudo}2`,
     color: 'white',
     score: 2
   }

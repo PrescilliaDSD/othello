@@ -9,6 +9,41 @@ const Board = ({ currentPlayer, setCurrentPlayer, opponent, setOpponent, board, 
   const id = useParams()
   const isInitialMount = useRef(true)
 
+  useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false
+    } else {
+      parseBoardToCheckAvailability()
+      board.length > 0 && parseBoardToCheckIfTheGameEnds()
+      const game = {
+        _id: id.id,
+        board,
+        player1: {
+          pseudo: player1,
+          color: 'black',
+          score: blackScore
+        },
+        player2: {
+          pseudo: player2,
+          color: 'white',
+          score: whiteScore
+        },
+        turn: currentPlayer,
+        status,
+        lastPass: lastPlayerPass
+      }
+      fetch('http://localhost:8888/updateGame', {
+        method: 'PUT',
+        headers: {
+          'Content-type': 'application/json'
+        },
+        body: JSON.stringify(game)
+      })
+        .then((res) => res.json())
+    }
+  }, [currentPlayer])
+
+  // fonction permettant d'ajouter un pion sur le plateau
   const addChip = (i, j) => () => {
     setLastPlayerPass('none')
     const newBoard = board.map((row, k) => {
@@ -30,6 +65,7 @@ const Board = ({ currentPlayer, setCurrentPlayer, opponent, setOpponent, board, 
     parseBoardToTurnChip(newBoard, i, j)
   }
 
+  // Fonction qui défini si une case est disponible pour y mettre un pion.
   const isAvailable = (arr, i, j, indI, indJ) => {
     let k = 1
     if (indI === '-' && indJ === 'none') {
@@ -92,6 +128,7 @@ const Board = ({ currentPlayer, setCurrentPlayer, opponent, setOpponent, board, 
     return false
   }
 
+  // Fonction qui définit si un pion doit se retourner suite à un coup du joueur adverse.
   const isTurning = (arr, i, j, indI, indJ) => {
     let k = 1
     if (indI === '-' && indJ === 'none') {
@@ -171,9 +208,10 @@ const Board = ({ currentPlayer, setCurrentPlayer, opponent, setOpponent, board, 
     let white = 0
     let black = 0
     arr.map((row) => {
-      row.map((column) => {
+      return row.map((column) => {
         if (column === 'black') black += 1
         if (column === 'white') white += 1
+        return column
       })
     })
     setWhiteScore(white)
@@ -181,6 +219,7 @@ const Board = ({ currentPlayer, setCurrentPlayer, opponent, setOpponent, board, 
     return arr
   }
 
+  // Fonction qui parcourt le plateau de jeu pour définir s'il faut faire des vérifications pour la disponibilité des cases
   const parseBoardToCheckAvailability = () => {
     const removeAllAvailable = board.map((row) => {
       return row.map((column) => {
@@ -286,6 +325,7 @@ const Board = ({ currentPlayer, setCurrentPlayer, opponent, setOpponent, board, 
     return setBoard(boardParsedBottomRightToUpLeft)
   }
 
+  // Fonction qui parcourt les cases autour de celle qu'on vient de remplir avec un pion afin de définir s'il faut faire des vérifications pour le retournement des pions.
   const parseBoardToTurnChip = (newBoard, i, j) => {
     if (i <= 5) {
       isTurning(newBoard, i, j, '+', 'none')
@@ -315,69 +355,34 @@ const Board = ({ currentPlayer, setCurrentPlayer, opponent, setOpponent, board, 
     setBoard(newBoard)
   }
 
+  // Fonction qui parcourt le plateau afin de définir si les conditions donnent lieu à une fin de jeu
   const parseBoardToCheckIfTheGameEnds = () => {
     let isTheBoardFilled = 0
-    console.log(board)
     board.map((row) => {
-      row.map((column) => {
+      return row.map((column) => {
         if (column === 'white' || column === 'black') {
           isTheBoardFilled += 1
         }
+        return column
       })
     })
     let isThereBlackChip = 0
     let isThereWhiteChip = 0
     board.map((row) => {
-      row.map((column) => {
+      return row.map((column) => {
         if (column === 'black') {
           isThereBlackChip += 1
         }
         if (column === 'white') {
           isThereWhiteChip += 1
         }
+        return column
       })
     })
     if (isTheBoardFilled === 64 || isThereBlackChip === 0 || isThereWhiteChip === 0) {
       endGame()
     }
   }
-
-  useEffect(() => {
-    if (isInitialMount.current) {
-      isInitialMount.current = false
-    } else {
-      parseBoardToCheckAvailability()
-      board.length > 0 && parseBoardToCheckIfTheGameEnds()
-      const game = {
-        _id: id.id,
-        board,
-        player1: {
-          pseudo: player1,
-          color: 'black',
-          score: blackScore
-        },
-        player2: {
-          pseudo: player2,
-          color: 'white',
-          score: whiteScore
-        },
-        turn: currentPlayer,
-        status,
-        lastPass: lastPlayerPass
-      }
-      fetch('http://localhost:8888/updateGame', {
-        method: 'PUT',
-        headers: {
-          'Content-type': 'application/json'
-        },
-        body: JSON.stringify(game)
-      })
-        .then((res) => res.json())
-        .then((res) => {
-          console.log('hiiiiiiiiii amjmajfamjf', res)
-        })
-    }
-  }, [currentPlayer])
 
   return (
     <>
@@ -422,18 +427,31 @@ const Board = ({ currentPlayer, setCurrentPlayer, opponent, setOpponent, board, 
 }
 
 Board.propTypes = {
+  // string
   currentPlayer: PropTypes.string.isRequired,
   opponent: PropTypes.string.isRequired,
+  status: PropTypes.string.isRequired,
+  lastPlayerPass: PropTypes.string.isRequired,
 
+  // object
+  player1: PropTypes.string.isRequired,
+  player2: PropTypes.string.isRequired,
+
+  // array
   board: PropTypes.array.isRequired,
 
+  // func
   setCurrentPlayer: PropTypes.func.isRequired,
   setOpponent: PropTypes.func.isRequired,
   setBoard: PropTypes.func.isRequired,
   setLastPlayerPass: PropTypes.func.isRequired,
   setWhiteScore: PropTypes.func.isRequired,
   setBlackScore: PropTypes.func.isRequired,
-  endGame: PropTypes.func.isRequired
+  endGame: PropTypes.func.isRequired,
+
+  // number
+  whiteScore: PropTypes.number.isRequired,
+  blackScore: PropTypes.number.isRequired
 }
 
 export default Board

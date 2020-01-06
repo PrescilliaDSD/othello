@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import Home from './components/Home'
-import Game from './components/Game'
+import Home from './Home'
+import Game from './Game'
 import SignUpSignIn from './SignUpSignIn'
 import NotFound from './NotFound'
 
 const App = () => {
+
   const [loggedIn, setLoggedIn] = useState(false)
   const [gameData, setGameData] = useState({})
   const [message, setMessage] = useState({
@@ -16,7 +17,6 @@ const App = () => {
 
   useEffect(() => {
     if (sessionStorage.getItem('pseudo') && sessionStorage.getItem('password')) {
-      console.log('hi')
       const user = {
         pseudo: sessionStorage.getItem('pseudo'),
         password: sessionStorage.getItem('password')
