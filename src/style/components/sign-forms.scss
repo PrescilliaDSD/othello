@@ -1,0 +1,49 @@
+.welcome-title {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.message {
+  text-align: center;
+}
+
+.message-error {
+  color: darkred;
+}
+
+.message-success {
+  color: darkgreen;
+}
+
+.sign-forms {
+  display: flex;
+  justify-content: space-around;
+  
+  section {
+      h2 {
+          text-align: center;
+      }
+      width: 45%;
+
+      form {
+          display: flex;
+          flex-direction: column;
+
+          label {
+              width: 90%;
+              display: flex;
+              justify-content: space-between;
+              margin: 1rem auto;
+          }
+
+          button {
+              width: 30%;
+              margin: auto;
+          }
+      }
+  }
+
+  section + section {
+      border-left: 1px solid black;
+  }
+}

@@ -1,0 +1,17 @@
+.home {
+  height: 90vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  &__actions {
+      display: flex;
+      list-style-type: none;
+      justify-content: space-around;
+  }
+}
+
+.games__list__item {
+  list-style-type: none;
+}
