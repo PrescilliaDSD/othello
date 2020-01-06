@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Root component should render correctly 1`] = `
+<main
+  className="home"
+>
+  <h1>
+    Jeu Othello
+  </h1>
+  <p
+    className="message message-undefined"
+  />
+  <p
+    className="what-to-do"
+  >
+    Que voulez-vous faire ?
+  </p>
+  <ul
+    className="home__actions"
+  >
+    <li>
+      <button
+        onClick={[Function]}
+      >
+        Créer une partie
+      </button>
+    </li>
+    <li>
+      <button
+        onClick={[Function]}
+      >
+        Me déconnecter
+      </button>
+    </li>
+  </ul>
+  <p>
+    Parties en cours : 
+  </p>
+  <ul
+    className="games__list"
+  />
+</main>
+`;

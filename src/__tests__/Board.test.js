@@ -8,7 +8,7 @@ import Board from '../components/Game/Board'
 
 Enzyme.configure({ adapter: new Adapter() })
 
-describe('Board component initialization', () => {
+describe('Board component', () => {
   it('should render correctly', () => {
     const component = renderer
       .create(<StaticRouter params="123"><Board opponent='' setOpponent={() => {}} setBoard={() => {}} setLastPlayerPass={() => {}} setWhiteScore={() => {}} setBlackScore={() => {}} endGame={() => {}} player1='' player2='' status='' whiteScore={0} blackScore={0} lastPlayerPass='' board={[
@@ -25,6 +25,23 @@ describe('Board component initialization', () => {
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
   })
+
+  it('should render an article tag', () => {
+    const component = renderer
+      .create(<StaticRouter params="123"><Board opponent='' setOpponent={() => {}} setBoard={() => {}} setLastPlayerPass={() => {}} setWhiteScore={() => {}} setBlackScore={() => {}} endGame={() => {}} player1='' player2='' status='' whiteScore={0} blackScore={0} lastPlayerPass='' board={[]} currentPlayer={'black'} setCurrentPlayer={() => {}} /></StaticRouter>)
+    const tree = component.toJSON()
+    expect(tree.type).toBe('article')
+  })
+
+  it('should render an ul tag in the article tag', () => {
+    const component = renderer
+      .create(<StaticRouter params="123"><Board opponent='' setOpponent={() => {}} setBoard={() => {}} setLastPlayerPass={() => {}} setWhiteScore={() => {}} setBlackScore={() => {}} endGame={() => {}} player1='' player2='' status='' whiteScore={0} blackScore={0} lastPlayerPass='' board={[]} currentPlayer={'black'} setCurrentPlayer={() => {}} /></StaticRouter>)
+    const tree = component.toJSON()
+    expect(tree.children[0].type).toBe('ul')
+  })
+})
+
+describe('Game initialization', () => {
   it('should render a black chip in square 45', () => {
     const component = renderer
       .create(<StaticRouter params="123"><Board opponent='' setOpponent={() => {}} setBoard={() => {}} setLastPlayerPass={() => {}} setWhiteScore={() => {}} setBlackScore={() => {}} endGame={() => {}} player1='' player2='' status='' whiteScore={0} blackScore={0} lastPlayerPass='' board={[

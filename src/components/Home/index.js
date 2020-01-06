@@ -64,8 +64,8 @@ const Home = ({ setLoggedIn, gameData, setGameData, message, setMessage }) => {
         }
         <li><button onClick={logout}>Me déconnecter</button></li>
       </ul>
+      <p>Parties en cours : </p>
       <ul className="games__list">
-        <p>Parties en cours : </p>
         {
           gamesList.length > 0 && gamesList.map((game) => {
             if (game.status === 'wait for player 2') {

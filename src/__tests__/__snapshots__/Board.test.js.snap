@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Board component initialization should render correctly 1`] = `
+exports[`Board component should render correctly 1`] = `
 <article
   className="board"
 >
