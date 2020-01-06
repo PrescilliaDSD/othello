@@ -1,0 +1,707 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Board component initialization should render correctly 1`] = `
+<article
+  className="board"
+>
+  <ul
+    className="board__row"
+  >
+    <li
+      className="row-number"
+    />
+    <li
+      className="row-number"
+    >
+      1
+    </li>
+    <li
+      className="row-number"
+    >
+      2
+    </li>
+    <li
+      className="row-number"
+    >
+      3
+    </li>
+    <li
+      className="row-number"
+    >
+      4
+    </li>
+    <li
+      className="row-number"
+    >
+      5
+    </li>
+    <li
+      className="row-number"
+    >
+      6
+    </li>
+    <li
+      className="row-number"
+    >
+      7
+    </li>
+    <li
+      className="row-number"
+    >
+      8
+    </li>
+  </ul>
+  <ul
+    className="board__row"
+  >
+    <li
+      className="column-number"
+    >
+      1
+    </li>
+    <li
+      className="board__square"
+      data-testid="11"
+      id="11"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="12"
+      id="12"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="13"
+      id="13"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="14"
+      id="14"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="15"
+      id="15"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="16"
+      id="16"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="17"
+      id="17"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="18"
+      id="18"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+  </ul>
+  <ul
+    className="board__row"
+  >
+    <li
+      className="column-number"
+    >
+      2
+    </li>
+    <li
+      className="board__square"
+      data-testid="21"
+      id="21"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="22"
+      id="22"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="23"
+      id="23"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="24"
+      id="24"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="25"
+      id="25"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="26"
+      id="26"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="27"
+      id="27"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="28"
+      id="28"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+  </ul>
+  <ul
+    className="board__row"
+  >
+    <li
+      className="column-number"
+    >
+      3
+    </li>
+    <li
+      className="board__square"
+      data-testid="31"
+      id="31"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="32"
+      id="32"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="33"
+      id="33"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square clickable"
+      data-testid="34"
+      id="34"
+      onClick={[Function]}
+    >
+      <div
+        className="available-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="35"
+      id="35"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="36"
+      id="36"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="37"
+      id="37"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="38"
+      id="38"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+  </ul>
+  <ul
+    className="board__row"
+  >
+    <li
+      className="column-number"
+    >
+      4
+    </li>
+    <li
+      className="board__square"
+      data-testid="41"
+      id="41"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="42"
+      id="42"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square clickable"
+      data-testid="43"
+      id="43"
+      onClick={[Function]}
+    >
+      <div
+        className="available-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="44"
+      id="44"
+    >
+      <div
+        className="white-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="45"
+      id="45"
+    >
+      <div
+        className="black-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="46"
+      id="46"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="47"
+      id="47"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="48"
+      id="48"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+  </ul>
+  <ul
+    className="board__row"
+  >
+    <li
+      className="column-number"
+    >
+      5
+    </li>
+    <li
+      className="board__square"
+      data-testid="51"
+      id="51"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="52"
+      id="52"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="53"
+      id="53"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="54"
+      id="54"
+    >
+      <div
+        className="black-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="55"
+      id="55"
+    >
+      <div
+        className="white-chip chip"
+      />
+    </li>
+    <li
+      className="board__square clickable"
+      data-testid="56"
+      id="56"
+      onClick={[Function]}
+    >
+      <div
+        className="available-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="57"
+      id="57"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="58"
+      id="58"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+  </ul>
+  <ul
+    className="board__row"
+  >
+    <li
+      className="column-number"
+    >
+      6
+    </li>
+    <li
+      className="board__square"
+      data-testid="61"
+      id="61"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="62"
+      id="62"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="63"
+      id="63"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="64"
+      id="64"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square clickable"
+      data-testid="65"
+      id="65"
+      onClick={[Function]}
+    >
+      <div
+        className="available-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="66"
+      id="66"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="67"
+      id="67"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="68"
+      id="68"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+  </ul>
+  <ul
+    className="board__row"
+  >
+    <li
+      className="column-number"
+    >
+      7
+    </li>
+    <li
+      className="board__square"
+      data-testid="71"
+      id="71"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="72"
+      id="72"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="73"
+      id="73"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="74"
+      id="74"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="75"
+      id="75"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="76"
+      id="76"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="77"
+      id="77"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="78"
+      id="78"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+  </ul>
+  <ul
+    className="board__row"
+  >
+    <li
+      className="column-number"
+    >
+      8
+    </li>
+    <li
+      className="board__square"
+      data-testid="81"
+      id="81"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="82"
+      id="82"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="83"
+      id="83"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="84"
+      id="84"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="85"
+      id="85"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="86"
+      id="86"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="87"
+      id="87"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+    <li
+      className="board__square"
+      data-testid="88"
+      id="88"
+    >
+      <div
+        className="no-chip chip"
+      />
+    </li>
+  </ul>
+</article>
+`;

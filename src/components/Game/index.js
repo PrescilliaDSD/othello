@@ -1,6 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
 import { useParams } from 'react-router-dom'
 
 import Board from './Board'
@@ -59,10 +58,6 @@ const Game = () => {
       <GameInfos endMsg={endMsg} endGame={endGame} whiteScore={whiteScore} blackScore={blackScore} lastPlayerPass={lastPlayerPass} setLastPlayerPass={setLastPlayerPass} board={board} currentPlayer={currentPlayer} setCurrentPlayer={setCurrentPlayer} opponent={opponent} setOpponent={setOpponent} player1={player1} player2={player2} />
     </main>
   )
-}
-
-Game.propTypes = {
-  gameData: PropTypes.object.isRequired
 }
 
 export default Game
